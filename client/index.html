@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎨 FlamBoard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="introOverlay">
+    <div class="intro-card">
+      <h1>🎨 FlamBoard</h1>
+      <p>A Real-Time Collaborative Drawing Platform</p>
+      <small>Built by <strong>Shaik Asim</strong>
+      <button id="startBtn">Start Drawing</button>
+    </div>
+  </div>
+
+  <header>
+    <div class="brand">🔥 FlamBoard</div>
+    <div id="status">🟢 Connected</div>
+  </header>
+
+  <div class="toolbar glass">
+    <select id="tool">
+      <option value="brush">Brush</option>
+      <option value="eraser">Eraser</option>
+      <option value="rect">Rectangle</option>
+      <option value="circle">Circle</option>
+      <option value="text">Text</option>
+    </select>
+    <input type="color" id="colorPicker" value="#00B8D9">
+    <input type="range" id="strokeWidth" min="1" max="20" value="3">
+    <button id="undoBtn">↩️ Undo</button>
+    <button id="redoBtn">↪️ Redo</button>
+    <button id="clearBtn">🗑️ Clear</button>
+    <button id="downloadBtn">💾 Save</button>
+    <button id="themeBtn">🌙 Dark</button>
+  </div>
+
+  <aside id="userList">
+    <h3>👥 Online</h3>
+    <ul id="users"></ul>
+  </aside>
+
+  <canvas id="canvas"></canvas>
+
+  <footer>
+    <span>© 2025 Built with ❤️ by <strong>Shaik Asim</strong>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="websocket.js"></script>
+  <script type="module" src="canvas.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
